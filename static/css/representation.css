@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'Yekan';
+    src: url('./font/Yekan.eot') format("eot"),
+        url('./font/Yekan.ttf') format("ttf"),
+        url('./font/Yekan.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Yekan';
+}
+
+body{
+    background-color: #3d1962;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6vh;
+    padding-top: 5vh;
+}
+
+.header-title{
+    color: #ffffff;
+    font-size: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-page{
+    color: #ffffff;
+    font-size: 3.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-header-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-logo{
+    width: 12%;
+    height: 12.5%;
+    border-radius: 20px;
+}
+
+.main{
+    padding-top: -10vh;
+    padding: 30vh;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vh;
+    flex-wrap: wrap;
+}
+
+label{
+    color: #ffffff;
+    font-size: 3.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+strong{
+    display: none;
+}
+
+input{
+    width: 40vh;
+    height: 5vh;
+    font-size: 4vh;
+    padding: 10px 20px;
+    border: hidden;
+    outline: none;
+    border-radius: 5vh;
+}
+
+textarea{
+    width: 40vh;
+    height: 5vh;
+    font-size: 4vh;
+    padding: 10px 20px;
+    border: hidden;
+    outline: none;
+    border-radius: 5vh;
+}
+
+.select{
+    width: 47vh;
+    height: 8vh;
+    font-size: 4vh;
+    padding: 10px 20px;
+    border: hidden;
+    outline: none;
+    border-radius: 5vh;
+}
+
+.asteriskField{
+    position: relative;
+    right: 1vh;
+    top: -1vh;
+}
+
+.clearablefileinput{
+    color: #ffffff;
+}
+
+.container-information-btn{
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.information{
+    font-size: 5vh;
+    padding: 10px 30px;
+    border: hidden;
+    border-radius: 5vh;
+    outline: none;
+    color: #3d1962;
+}
+
+.information:hover{
+    background-color: #fbb144;
+}
+
+.footer{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    background-color: #4d4d4d;
+    height: 40vh;
+}
+
+.footer-logo{
+    width: 12.5vh;
+    height: 12.5vh;
+    border-radius: 2.5px;
+}
+
+.text-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question , .about-us{
+    color: #ffffff;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.text-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 2.5vh;
+    color: #ffffff;
+}
+
+span{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+    #div_id_cv{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        right: 23vh;
+    }
+
+    .container-information-btn{
+        padding-top: 50vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: -28vh;
+    }
+}
+
+
+@media only screen and (min-width:425px) and (max-width:768px){
+
+    .header-logo{
+        border-radius: 10px;
+    }
+
+    .main{
+        padding: 10vh;
+    }
+    
+    .container-information-btn{
+        padding-top: 20vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:376px){
+
+    .main{
+        padding: 10vh;
+    }
+
+    .header-title{
+        font-size: 4vh;
+    }
+    
+    .title-page{
+        color: #ffffff;
+        font-size: 3.5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .header-logo{
+        width: 12%;
+        height: 12.5%;
+        border-radius: 10px;
+    }
+    
+    .main{
+    padding: 20vh;
+    }
+
+    label{
+        color: #ffffff;
+        font-size: 3vh;
+    }
+
+    input{
+        width: 30vh;
+        height: 2.5vh;
+        font-size: 2vh;
+        padding: 10px 20px;
+        border-radius: 5vh;
+    }
+    
+    textarea{
+        width: 30vh;
+        height: 2.5vh;
+        font-size: 2vh;
+        padding: 10px 20px;
+        border-radius: 5vh;
+    }
+
+    .select{
+        width: 37vh;
+        height: 6vh;
+        font-size: 4vh;
+        padding: 10px 20px;
+        border: hidden;
+        outline: none;
+        border-radius: 5vh;
+    }
+
+    .container-information-btn{
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .information{
+        font-size: 3vh;
+        padding: 5px 40px;
+        border: hidden;
+        border-radius: 5vh;
+        outline: none;
+        color: #3d1962;
+    }
+
+}
+
+.question , .about-us{
+    color: #ffffff;
+    font-size: 2.5vh;
+    text-decoration: none;
+}
+
+.text{
+    font-size: 2vh;
+    color: #ffffff;
+}
+
+@media only screen and (max-width:320px){
+
+    .main{
+        padding: 10vh;
+    }
+
+}

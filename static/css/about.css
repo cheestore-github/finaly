@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Yekan';
+}
+
+body{
+    background-color: #3d1962;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    padding-top: 5vh;
+}
+
+.header-title{
+    color: #ffffff;
+    font-size: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-container-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo{
+    width: 12.5%;
+    height: 12.5%;
+    border-radius: 25px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-about{
+    padding-top: 10vh;
+    width: 80%;
+}
+
+.about-text{
+    padding: 5vh;
+    font-size: 3vh;
+    border: solid 5px #fbb144;
+    border-radius: 25px;
+    color: #000000;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #5c5c5c;
+    height: 20vh;
+}
+
+.question , .about-us{
+    color: #ffffff;
+    font-size: 2.5vh;
+}
+
+.footer-logo{
+    width: 12.5vh;
+    height: 12.5vh;
+}
+
+.text-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 2.5vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question , .about-us{
+    color: #ffffff;
+    font-size: 2.5vh;
+}
+
+span{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media only screen and (min-width:375px) and (max-width:426px){
+
+    .header-title{
+        font-size: 4vh;
+    }
+
+    .logo{
+        width: 12.5%;
+        height: 12.5%;
+        border-radius: 15px;
+    }
+
+    .footer{
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #5c5c5c;
+        height: 25vh;
+    }
+    
+    .footer-logo{
+        width: 10vh;
+        height: 10vh;
+    }
+    
+    .text-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .text{
+        font-size: 2.25vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .question , .about-us{
+        color: #ffffff;
+        font-size: 2.25vh;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .header-title{
+        font-size: 3vh;
+    }
+
+    .logo{
+        width: 12.5%;
+        height: 12.5%;
+        border-radius: 10px;
+    }
+
+    .footer{
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #5c5c5c;
+        height: 25vh;
+    }
+    
+    .footer-logo{
+        width: 10vh;
+        height: 10vh;
+    }
+    
+    .text-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .text{
+        font-size: 2vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .question , .about-us{
+        color: #ffffff;
+        font-size: 2vh;
+    }
+
+    .about-text{
+        padding: 5vh;
+        font-size: 2.5vh;
+        border: solid 5px #fbb144;
+        border-radius: 25px;
+        color: #000000;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

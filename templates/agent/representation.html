@@ -1,0 +1,187 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/representation.css' %}">
+    <title>صفحه ثبت نام نمایندگان</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">سامانه فروش تولیدکنندگان پوشاک کشور</h1>
+            <div class="container-header-logo">
+                <img class="header-logo" src="{% static 'logo/logo.png' %}">
+            </div>
+            <h2  class="title-page">ثبت نام متقاضیان اخذ نمایندگی</h2>
+        </header>
+        
+        <div class="main">  
+            <form enctype="multipart/form-data" action="" method="post">
+                {% csrf_token %}
+                {{ user_form | crispy }}
+                {{ agent_form | crispy }}
+                <br>
+                <div class='container-information-btn'>
+                    <button class='information' >ثبت اطلاعات</button>
+                </div>
+            </form>
+        </div>
+            {% comment %} <form class="long-form" id="UserRegister_form" enctype="multipart/form-data" method="POST">
+                {{ form.errors }}
+                {% csrf_token %}
+                <div class="label-field">
+                    <label>نام</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="label-field">
+                    <label>نام خانوادگی</label>
+                    <input type="text" id="family" name="family">
+                </div>
+
+                <div class="label-field">
+                    <label>شماره همراه</label>
+                    <input type="tel" id="phone_number" name="phone_number">
+                </div>
+                
+                <div class="label-field">
+                    <label>کد ملی</label>
+                    <input type="text" id="national_code" name="national_code">
+                </div>
+
+                <div class="label-field">
+                    <label>ایمیل</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="label-field">
+                    <label>تلفن ثابت</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="label-field">
+                    <label>سال تولد</label>
+                    <input type="number" id="birth_year" name="birth_year">
+                </div>
+
+                <div class="label-field">
+                    <label>شهر محل سکونت</label>
+                    <input type="text" id="residence_city" name="residence_city">
+                </div>
+
+                <div class="label-field">
+                    <label>شهر مورد تقاضا برای نمایندگی</label>
+                    <input type="text" id="agency_city" name="agency_city">
+                </div>
+
+                <div class="label-field">
+                    <label>معرف</label>
+                    <input type="text" id="reagent" name="reagent">
+                </div>
+
+                <div class="label-field">
+                    <label>میزان تحصیلات</label>
+                    <input type="text" id="schooling" name="schooling">
+                </div>
+
+                <div class="label-field">
+                    <label>وضعیت اشتغال</label>
+                    <input type="text" id="plunge_case" name="plunge_case">
+                </div>
+
+                <div class="label-field">
+                    <label>مدت زمان همکاری در آخرین تجربه کاری</label>
+                    <input type="text"id="last_collab" name="last_collab">
+                </div>
+
+            </form>
+            <form class="long-form" id="AgentRegisterForm_form" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+
+                <div class="label-field">
+                    <label>سوابق شغلی</label>
+                    <textarea class="field-text" id="job_history" name="job_history"></textarea>
+                </div>
+
+                <div class="label-field">
+                    <label>مهارت های فضای مجازی </label>
+                    <textarea class="field-text" id="social_media_skills" name="social_media_skills"></textarea>
+                </div>
+
+                <div class="label-field">
+                    <label>مهارت های حرفه ای</label>
+                    <textarea class="field-text" id="profational_skills" name="profational_skills"></textarea>
+                </div>
+
+                <div class="label-field">
+                    <label>متراژ و نوع مالکیت فضای کار</label>
+                    <textarea class="field-text" id="job_space" name="job_space"></textarea>
+                </div>
+
+                <div class="label-field">
+                    <label>مزایای شغلی مورد علاقه</label>
+                    <textarea class="field-text" id="favorites" name="favorites"></textarea>
+                </div>
+
+                <div class="label-field">
+                    <label>سطح زبان انگلیسی یا سایر زبان ها</label>
+                    <textarea class="field-text" id="languages" name="languages"></textarea>
+                </div>
+
+            </form>
+            <form class="three-form" id="AgentRegister_form" method="POST">
+                {% csrf_token %}
+                
+                <div class="choose-way" id="familiarity_with_us" name="familiarity_with_us">
+                    <label>از چه طریق با مجموعه ما آشنا شدید ؟</label class="label-field">
+                    <select required="">
+                        <option value="" selected=""></option>
+                        <option value="google">جستجو در اینترنت</option>
+                        <option value="instagram">اینستاگرام</option>
+                        <option value="telegram">تلگرام</option>
+                        <option value="friends">دوستان و آشنایان</option>
+                        <option value="others">سایر</option>
+                    </select>
+                </div>
+                
+                <div class="choose-file" id="cv" name="cv">
+                    <label class="label-field">آپلود رزومه</label>
+                    <input class="choose-input" type="file">
+                </div>
+
+                <button class="submit-information" onclick="{% url 'seller:contract' %}">ثبت اطلاعات</button>
+                
+            </form> {% endcomment %}
+
+        {% comment %} <div class="logo-whats-app-container">
+            <a href="https://wa.me/[9923515166]">
+                <img  class="logo-whats-app" src="{% static 'image/whatsapp-1024x1024.png' %}">
+            </a>
+        </div> {% endcomment %}
+            
+
+
+        <div class="footer">
+            <div>
+                <a  href="https://trustseal.enamad.ir/?id=248366&code=nWHbJZwi5ZetplLy6fZO" target="_self" rel="noopener">
+                    <img class="footer-logo" src="{% static 'logo/photo_2022-09-19_17-40-51.jpg' %}">
+                </a>
+            </div>
+            <div class="text-footer">
+                <div class="link">
+                    <a class="question" href="./question.html">سوالات</a>
+                    <span> , </span>
+                    <a class="about-us" href="./about.html">درباره ما</a>
+                </div>
+                <p class="text">تمامی حقوق این سایت متعلق به شرکت لیان یاقوت ممتاز ایده (لیما) می باشد</p>
+                <p class="text">تابستان 1401 ©</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

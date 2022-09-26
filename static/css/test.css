@@ -1,0 +1,235 @@
+body{
+    background-color: #3d1962;
+    overflow-x: hidden;
+}*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Yekan';
+}
+
+body{
+    background-color: #3d1962;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    padding-top: 5vh;
+}
+
+.header-title{
+    color: #ffffff;
+    font-size: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-page{
+    color: #ffffff;
+    font-size: 3.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-container-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo{
+    width: 12.5%;
+    height: 12.5%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.text-contract{
+    font-size: 2.5vh;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.container-chckbox{
+    padding-top: 5vh;
+}
+
+.text-chechbox{
+    color: #ffffff;
+    font-size: 2.5vh;
+}
+
+.container-btn-payment{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-payment{
+    font-size: 3vh;
+    padding: 10px 30px;
+    padding: 10px 30px;
+    border: hidden;
+    border-radius: 15px;
+}
+
+
+.btn-payment:hover{
+    background-color: #fbb144;
+    border: hidden;
+    font-size: 3vh;
+    padding: 10px 30px;
+}
+
+.footer{
+    position: relative;
+    top: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #5c5c5c;
+    height: 20vh;
+}
+
+.footer-logo{
+    width: 12.5vh;
+    height: 12.5vh;
+}
+
+.container-text-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-footer{
+    font-size: 2.5vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (min-width:375px) and (max-width:426px){
+
+    .header-title{
+        color: #ffffff;
+        font-size: 4vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer{
+        position: relative;
+        top: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #5c5c5c;
+        height: 20vh;
+    }
+    
+    .footer-logo{
+        width: 10vh;
+        height: 10vh;   
+    }
+
+    .text-footer{
+        font-size: 2.5vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:375px){
+
+    .text-footer{
+        font-size: 2vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:320px){
+
+    .header-title{
+        color: #ffffff;
+        font-size: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer{
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #5c5c5c;
+        height: 25vh;
+    }
+    
+    .footer-logo{
+        width: 10vh;
+        height: 10vh;
+    }
+    
+    .text-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .text{
+        font-size: 2vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .question , .about-us{
+        color: #ffffff;
+        font-size: 2vh;
+    }
+
+    .about-text{
+        padding: 5vh;
+        font-size: 2.5vh;
+        border: solid 5px #fbb144;
+        border-radius: 25px;
+        color: #000000;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

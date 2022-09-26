@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  force:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/force
+      - force_static_volume:/force/static
+      - force_files_volume:/force/media
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - force_network
+      - nginx_network
+    depends_on:
+      - force_postgresql
+    # command: ["python","./manage.py", "runserver", "8000"]
+
+  force_postgresql:
+    image: m.docker-registry.ir/postgres:10
+    container_name: force_postgresql
+    volumes:
+      - force_postgresql:/var/lib/postgresql/data
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - force_network
+
+volumes:
+  force_postgresql:
+    external: true
+  force_static_volume:
+    external: true
+  force_files_volume:
+    external: true
+networks:
+  force_network:
+    external: true
+  nginx_network:
+    external: true
+
+
